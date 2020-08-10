@@ -1,0 +1,145 @@
+/*Reset */
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: georgia, serif;
+  color: #252525;
+}
+
+.menu {
+  background: #252525;
+  padding: 25px 0px;
+}
+
+/*div que centraliza a logo e o nav*/
+.menu-container {
+  max-width: 960px;
+  margin: 0 auto;
+  /* centralizar a div no centro*/
+}
+
+/* Clearfix, faz com que o conteúdo filho se adapte ao conteudo pai*/
+.menu-container::after,
+.menu-container:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/*Por padrão o a display inline*/
+a.menu-logo {
+  display: block; /* display block cobre todo container */
+  float: left; /* float faz com que cubra somente o tamanho do elemento(logo) automaticamente*/
+  margin-left: 10px;
+}
+
+.menu-nav {
+  float: right;
+  margin-right: 10px;
+}
+
+.menu-nav li {
+  display: inline-block;
+}
+
+/* Estilizando no <a> para usabilidade, pois no li ele precisaria clicar somente diretamente no link*/
+.menu-nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.125em; /*1.125 é 18px, basta dividir 18 pela base: 18/16=1.125em*/
+}
+
+/*Imagem da introdução */
+.intro {
+  background: url('./img/bg-intro.jpg') no-repeat center center; /*alinha centro dos lados e de cima*/
+  background-size: cover; /*Imagem sempre 100% de acordo com a tela*/
+  padding: 150px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.intro h1 {
+  text-transform: uppercase;
+  font-size: 3em; /*48px  48/16=3em*/
+}
+
+.intro h1::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 4px;
+  background-color: #fff;
+  margin: 10px auto;
+}
+
+.intro p {
+  font-style: italic;
+  font-size: 1.125em; /*18px*/
+}
+
+.sobre {
+  padding: 60px 0;
+}
+
+.sobre-container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/*clearfix*/
+.sobre-container::after,
+.sobre-container::before {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sobre h2 {
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 60px;
+}
+
+.sobre-item {
+  width: 460px; /*tamanho de cada imagem*/
+  float: left;
+  margin: 0 10px; /* espaçar 10px para os lados*/
+}
+
+.sobre-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.sobre-item h3 {
+  font-size: 2.25em;
+  line-height: 1em;
+  width: 220px;
+  background: #252525;
+  color: #fff;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  padding: 5px 0 10px 0;
+  top: -25px;
+  position: relative;
+}
+/* 1º p da classe sobre*/
+.sobre > p {
+  font-size: 1.27em;
+  line-height: 1.4em;
+  font-style: italic;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 460px;
+}
